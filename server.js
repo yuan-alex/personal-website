@@ -8,6 +8,6 @@ app.use("*", serveStatic({ root: "dist" }));
 
 serve({
   fetch: app.fetch,
-  hostname: process.env.HOST || "localhost",
+  hostname: process.env.HOST || "0.0.0.0",
   port: process.env.PORT || 3000,
 });
