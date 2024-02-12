@@ -6,4 +6,8 @@ const app = new Hono();
 
 app.use("*", serveStatic({ root: "dist" }));
 
-serve(app);
+serve({
+  fetch: app.fetch,
+  hostname: process.env.HOST || "localhost",
+  port: process.env.PORT || 3000,
+});
