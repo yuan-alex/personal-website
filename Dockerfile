@@ -24,11 +24,10 @@ RUN pnpm run build
 FROM base AS runtime
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
-COPY --from=build /app/server.js ./server.js
 
 ENV NODE_ENV production
 ENV HOST 0.0.0.0
 
 EXPOSE 3000/tcp
 
-CMD ["node", "server.js"]
+CMD ["pnpm", "run", "start"]

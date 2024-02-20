@@ -5,18 +5,20 @@
     "format": "biome format . --write",
     "dev": "astro dev --port=3000",
     "build": "astro build",
-    "start": "node server.js",
+    "start": "node ./dist/server/entry.mjs",
     "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@biomejs/biome": "1.5.3",
+    "@flydotio/dockerfile": "^0.5.2",
     "@fontsource/geist-sans": "^5.0.1",
     "@types/react": "^18.2.55",
     "astro": "^4.3.5",
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@astrojs/node": "^8.2.0",
     "@hono/node-server": "^1.7.0",
     "hono": "^4.0.1"
   }
