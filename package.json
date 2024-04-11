@@ -13,7 +13,6 @@
     "@biomejs/biome": "1.5.3",
     "@flydotio/dockerfile": "^0.5.2",
     "@fontsource/geist-sans": "^5.0.1",
-    "@tailwindcss/typography": "^0.5.12",
     "@types/react": "^18.2.55",
     "astro": "^4.3.5",
     "typescript": "^5.3.3"
@@ -21,6 +20,7 @@
   "dependencies": {
     "@astrojs/node": "^8.2.0",
     "@hono/node-server": "^1.7.0",
+    "@tailwindcss/typography": "^0.5.12",
     "hono": "^4.0.1"
   }
 }
