@@ -1,0 +1,25 @@
+---
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html>
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-gradient-to-r from-blue-300 to-green-300 p-5 lg:p-10"
+    >
+      <div
+        class="mx-auto rounded-lg bg-white p-6 shadow-xl sm:w-2/3 md:w-3/5 lg:w-1/2 lg:p-12 xl:w-2/5"
+      >
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

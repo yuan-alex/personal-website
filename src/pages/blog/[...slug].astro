@@ -1,0 +1,27 @@
+---
+import { getEntry } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+if (slug === undefined) {
+  throw new Error("Slug is required");
+}
+const entry = await getEntry("blog", slug);
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <div class="mb-10">
+    <h1 class="text-3xl font-semibold mb-2">
+      {entry.data.title}
+    </h1>
+    <p>{entry.data.publishedDate}</p>
+  </div>
+  <article class="prose">
+    <Content />
+  </article>
+</Layout>

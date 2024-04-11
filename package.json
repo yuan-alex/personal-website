@@ -5,7 +5,7 @@
     "format": "biome format . --write",
     "dev": "astro dev --port=3000",
     "build": "astro build",
-    "start": "node ./dist/server/entry.mjs",
+    "start": "bun run ./dist/server/entry.mjs",
     "preview": "astro preview"
   },
   "devDependencies": {
@@ -13,6 +13,8 @@
     "@biomejs/biome": "1.5.3",
     "@flydotio/dockerfile": "^0.5.2",
     "@fontsource/geist-sans": "^5.0.1",
+    "@tailwindcss/typography": "^0.5.12",
+    "@types/bun": "latest",
     "@types/react": "^18.2.55",
     "astro": "^4.3.5",
     "typescript": "^5.3.3"
