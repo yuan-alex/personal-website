@@ -1,6 +1,6 @@
 ---
-import "@fontsource/geist-sans";
 import { getCollection } from "astro:content";
+import "@fontsource/geist-sans";
 import Layout from "../layouts/Layout.astro";
 
 const blogEntries = await getCollection("blog");
@@ -8,28 +8,28 @@ const blogEntries = await getCollection("blog");
 const work = [
   {
     company: "Faire",
-    title: "Platform Engineering Intern",
+    title: "Platform Engineer Co-op",
     date: "May 2024 - Sep 2024",
     img: "/static/images/faire_dark.jpeg",
     url: "https://www.faire.com",
   },
   {
     company: "Enzuzo",
-    title: "Software Engineering Intern",
+    title: "Software Engineer Co-op",
     date: "Jan 2024 - April 2024",
     img: "/static/images/enzuzo.jpeg",
     url: "https://www.enzuzo.com",
   },
   {
     company: "Faire",
-    title: "Backend Engineering Intern",
+    title: "Backend Engineer Co-op",
     date: "Sep 2022 - Dec 2022",
     img: "/static/images/faire_dark.jpeg",
     url: "https://www.faire.com",
   },
   {
     company: "Faire",
-    title: "Frontend Engineering Intern",
+    title: "Frontend Engineer Co-op",
     date: "Jan 2022 - Apr 2022",
     img: "/static/images/faire_dark.jpeg",
     url: "https://www.faire.com",
@@ -53,10 +53,7 @@ const projects = [
     <h1 id="name" class="text-2xl font-semibold">Alex Yuan</h1>
   </div>
   <div class="flex flex-col space-y-5 text-lg">
-    <p>
-      In my free time, I program computers. I attend the University of Waterloo
-      studying Geomatics graduating in 2025.
-    </p>
+    <p>Programming hobbyist specializing in web technologies.</p>
   </div>
   <div class="h-5"></div>
   <div class="flex space-x-3">
@@ -85,7 +82,7 @@ const projects = [
             <img alt={`${w.company} logo`} class="h-14 w-14" src={w.img} />
           </a>
           <div>
-            <p class="text-sm">{w.title}</p>
+            <p class="text-md font-semibold">{w.title}</p>
             <p class="text-sm">{w.company}</p>
             <p class="text-sm text-gray-600">{w.date}</p>
           </div>
