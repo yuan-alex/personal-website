@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "type": "module",
+  "packageManager": "pnpm@9.0.6",
   "scripts": {
     "format": "biome format . --write",
     "dev": "astro dev --port=3000",
