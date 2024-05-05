@@ -10,16 +10,16 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "@biomejs/biome": "1.6.4",
-    "@flydotio/dockerfile": "^0.5.4",
-    "@fontsource/geist-sans": "^5.0.2",
-    "@types/react": "^18.2.78",
-    "astro": "^4.6.1",
+    "@biomejs/biome": "1.7.2",
+    "@flydotio/dockerfile": "^0.5.7",
+    "@fontsource/geist-sans": "^5.0.3",
+    "@types/react": "^18.3.1",
+    "astro": "^4.7.1",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@hono/node-server": "^1.10.0",
-    "@tailwindcss/typography": "^0.5.12",
-    "hono": "^4.2.4"
+    "@hono/node-server": "^1.11.1",
+    "@tailwindcss/typography": "^0.5.13",
+    "hono": "^4.3.2"
   }
 }
