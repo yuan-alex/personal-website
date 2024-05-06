@@ -7,16 +7,10 @@ const blogEntries = await getCollection("blog");
 
 const work = [
   {
-    company: "Faire",
-    title: "Platform Engineer Co-op",
-    date: "May 2024 - Sep 2024",
-    img: "/static/images/faire_dark.jpeg",
-    url: "https://www.faire.com",
-  },
-  {
     company: "Enzuzo",
     title: "Software Engineer Co-op",
     date: "Jan 2024 - April 2024",
+    location: "Waterloo, Ontario, Canada",
     img: "/static/images/enzuzo.jpeg",
     url: "https://www.enzuzo.com",
   },
@@ -24,6 +18,7 @@ const work = [
     company: "Faire",
     title: "Backend Engineer Co-op",
     date: "Sep 2022 - Dec 2022",
+    location: "Toronto, Ontario, Canada",
     img: "/static/images/faire_dark.jpeg",
     url: "https://www.faire.com",
   },
@@ -31,6 +26,7 @@ const work = [
     company: "Faire",
     title: "Frontend Engineer Co-op",
     date: "Jan 2022 - Apr 2022",
+    location: "Waterloo, Ontario, Canada",
     img: "/static/images/faire_dark.jpeg",
     url: "https://www.faire.com",
   },
@@ -49,13 +45,13 @@ const projects = [
 ---
 
 <Layout title="Alex Yuan" description="Software development">
-  <div class="mb-4">
-    <h1 id="name" class="text-2xl font-semibold">Alex Yuan</h1>
+  <div class="flex space-x-5">
+    <img class="h-20 w-20 mb-5 rounded-full" src="/static/images/avatar.png" />
+    <div class="">
+      <h1 class="text-2xl font-semibold">Alex Yuan</h1>
+      <p>Software enthusiast specializing in web technologies.</p>
+    </div>
   </div>
-  <div class="flex flex-col space-y-5 text-lg">
-    <p>Programming hobbyist specializing in web technologies.</p>
-  </div>
-  <div class="h-5"></div>
   <div class="flex space-x-3">
     <a
       class="rounded-lg bg-blue-100 px-3 py-1 hover:bg-blue-200"
@@ -73,11 +69,11 @@ const projects = [
     </a>
   </div>
   <div class="h-10"></div>
-  <p class="mb-4 text-lg">Work Experience</p>
-  <div class="flex flex-col space-y-5">
+  <p class="text-lg">Work Experience</p>
+  <div class="flex flex-col divide-y">
     {
       work.map((w) => (
-        <div class="flex items-center space-x-3 rounded-lg">
+        <div class="py-3 flex space-x-3 rounded-lg">
           <a href={w.url}>
             <img alt={`${w.company} logo`} class="h-14 w-14" src={w.img} />
           </a>
@@ -85,6 +81,7 @@ const projects = [
             <p class="text-md font-semibold">{w.title}</p>
             <p class="text-sm">{w.company}</p>
             <p class="text-sm text-gray-600">{w.date}</p>
+            <p class="text-sm text-gray-600">{w.location}</p>
           </div>
         </div>
       ))
