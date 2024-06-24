@@ -11,13 +11,19 @@ const { title, description } = Astro.props;
     <meta name="robots" content="noindex" />
     <meta property="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <style>
+      html,
+      body {
+        overscroll-behavior-y: none;
+      }
+    </style>
   </head>
   <body>
     <div
-      class="min-h-screen bg-gradient-to-r from-blue-300 to-green-300 p-5 lg:p-10"
+      class="min-h-screen bg-gradient-to-r bg-gray-100 dark:bg-zinc-950 p-5 lg:p-10"
     >
       <div
-        class="mx-auto rounded-lg bg-white p-6 shadow-xl sm:w-2/3 md:w-3/5 lg:w-1/2 lg:p-12 xl:w-2/5"
+        class="mx-auto rounded-lg bg-white dark:bg-zinc-900 dark:border dark:border-zinc-500 p-6 shadow-xl sm:w-2/3 md:w-3/5 lg:w-1/2 lg:p-12 xl:w-2/5"
       >
         <slot />
       </div>

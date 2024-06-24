@@ -19,12 +19,12 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
   <div class="mb-10">
-    <h1 class="text-3xl font-semibold mb-2">
+    <h1 class="text-3xl font-semibold mb-2 text-white">
       {entry.data.title}
     </h1>
-    <p>{entry.data.publishedDate}</p>
+    <p class="text-white">{entry.data.publishedDate}</p>
   </div>
-  <article class="prose">
+  <article class="prose dark:prose-invert">
     <Content />
   </article>
 </Layout>

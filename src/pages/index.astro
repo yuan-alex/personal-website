@@ -55,7 +55,7 @@ const projects = [
 <Layout title="Alex Yuan" description="Software development">
   <div class="flex space-x-5">
     <img class="h-20 w-20 mb-5 rounded-full" src="/static/images/avatar.png" />
-    <div class="">
+    <div class="dark:text-white">
       <h1 class="text-2xl font-semibold">Alex Yuan</h1>
       <p>Software enthusiast specializing in web technologies.</p>
     </div>
@@ -77,47 +77,48 @@ const projects = [
     </a>
   </div>
   <div class="h-10"></div>
-  <p class="text-lg">Work Experience</p>
-  <div class="flex flex-col divide-y">
+  <p class="text-lg dark:text-white">Work Experience</p>
+  <div class="flex flex-col divide-y dark:divide-gray-500">
     {
       work.map((w) => (
-        <div class="py-3 flex space-x-3 rounded-lg">
+        <div class="py-3 flex space-x-3">
           <a href={w.url}>
             <img alt={`${w.company} logo`} class="h-14 w-14" src={w.img} />
           </a>
           <div>
-            <p class="text-md font-semibold">{w.title}</p>
-            <p class="text-sm">{w.company}</p>
-            <p class="text-sm text-gray-600">{w.date}</p>
-            <p class="text-sm text-gray-600">{w.location}</p>
+            <p class="text-md font-semibold dark:text-white">{w.title}</p>
+            <p class="text-sm dark:text-white">{w.company}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{w.date}</p>
+            <p class="text-sm text-gray-600 dark:text-gray-300">{w.location}</p>
           </div>
         </div>
       ))
     }
   </div>
   <div class="h-10"></div>
-  <p class="mb-4 text-lg">Projects</p>
+  <p class="mb-4 text-lg dark:text-white">Projects</p>
   <div class="flex flex-col space-y-1">
     {
       projects.map((project) => (
         <a href={project.url}>
-          <div class="text-md underline">{project.name}</div>
+          <div class="text-md underline dark:text-white">{project.name}</div>
         </a>
       ))
     }
   </div>
   <div class="h-10"></div>
   <div>
-    <p class="mb-4 text-lg">Blog</p>
+    <p class="mb-4 text-lg dark:text-white">Blog</p>
     <div class="flex flex-col space-y-5">
       {
         blogEntries.map((blogPostEntry) => (
           <a href={`/blog/${blogPostEntry.slug}`}>
-            <div class="p-5 border shadow rounded hover:bg-gray-100">
-              <p class="text-lg mb-2">{blogPostEntry.data.title}</p>
-              <time datetime={blogPostEntry.data.publishedDate.toISOString()}>
+            <div class="">
+              <p class="text-md underline dark:text-white">
+                {blogPostEntry.data.title}
+                {" - "}
                 {blogPostEntry.data.publishedDate.toDateString()}
-              </time>
+              </p>
             </div>
           </a>
         ))
