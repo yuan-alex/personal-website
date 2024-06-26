@@ -1,6 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import "@fontsource/geist-sans";
+import { Image } from "astro:assets";
+
+import avatar from "../assets/images/avatar.png";
+import enzuzo from "../assets/images/enzuzo.jpeg";
+import faire from "../assets/images/faire_dark.jpeg";
 import Layout from "../layouts/Layout.astro";
 
 const blogEntries = await getCollection("blog");
@@ -11,7 +16,7 @@ const work = [
     title: "Backend Engineer Co-op",
     date: "May 2024 - Present",
     location: "Toronto, Ontario, Canada",
-    img: "/static/images/faire_dark.jpeg",
+    img: faire,
     url: "https://www.faire.com",
   },
   {
@@ -19,7 +24,7 @@ const work = [
     title: "Software Engineer Co-op",
     date: "Jan 2024 - April 2024",
     location: "Waterloo, Ontario, Canada",
-    img: "/static/images/enzuzo.jpeg",
+    img: enzuzo,
     url: "https://www.enzuzo.com",
   },
   {
@@ -27,7 +32,7 @@ const work = [
     title: "Backend Engineer Co-op",
     date: "Sep 2022 - Dec 2022",
     location: "Toronto, Ontario, Canada",
-    img: "/static/images/faire_dark.jpeg",
+    img: faire,
     url: "https://www.faire.com",
   },
   {
@@ -35,7 +40,7 @@ const work = [
     title: "Frontend Engineer Co-op",
     date: "Jan 2022 - Apr 2022",
     location: "Waterloo, Ontario, Canada",
-    img: "/static/images/faire_dark.jpeg",
+    img: faire,
     url: "https://www.faire.com",
   },
 ];
@@ -54,7 +59,7 @@ const projects = [
 
 <Layout title="Alex Yuan" description="Software development">
   <div class="flex space-x-5">
-    <img class="h-20 w-20 mb-5 rounded-full" src="/static/images/avatar.png" />
+    <Image class="h-20 w-20 mb-5 rounded-full" src={avatar} alt="avatar" />
     <div class="dark:text-white">
       <h1 class="text-2xl font-semibold">Alex Yuan</h1>
       <p>Software enthusiast specializing in web technologies.</p>
@@ -83,7 +88,7 @@ const projects = [
       work.map((w) => (
         <div class="py-3 flex space-x-3">
           <a href={w.url}>
-            <img alt={`${w.company} logo`} class="h-14 w-14" src={w.img} />
+            <Image alt={`${w.company} logo`} class="h-14 w-14" src={w.img} />
           </a>
           <div>
             <p class="text-md font-semibold dark:text-white">{w.title}</p>
